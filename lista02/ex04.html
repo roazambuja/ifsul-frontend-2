@@ -1,0 +1,14 @@
+<script>
+  // Crie um programa que, utilizando um laço for, cria um menu com a estrutura
+  // ul li. Esse menu terá cinco itens, chamados item 1, item 2, item 3, item 4 e
+  // item 5 e esses itens direcionarão para as páginas: pagina1.html,
+  // pagina2.html, pagina3.html, pagina4.html e pagina5.html.
+
+  document.write("<ul>");
+  for (let i = 1; i <= 5; i++) {
+    document.write(
+      "<li><a href='pagina" + i + ".html'>Item " + i + "</a></li>"
+    );
+  }
+  document.write("</ul>");
+</script>

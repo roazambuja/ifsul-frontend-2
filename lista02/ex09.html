@@ -1,0 +1,21 @@
+<script>
+  // Gere um número aleatório N entre 0 e 10 com a função random. Através de
+  // prompt box você deverá tentar adivinhar o número gerado. Você terá 3
+  // tentativas para tentar acertar o número. Caso não consiga em 3 tentativas,
+  // exibir um alerta com o número gerado.
+
+  let num = Math.floor(10 * Math.random());
+  let cont = 0;
+  do {
+    let tentativa = prompt("Adivinhe o número:");
+
+    if (tentativa == num) {
+      alert("Parabens, voce acertou!");
+      cont = 3;
+    } else {
+      alert("Tente novamente!");
+      cont++;
+    }
+  } while (cont < 3);
+  alert("O numero correto é " + num);
+</script>

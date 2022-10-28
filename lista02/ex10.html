@@ -1,0 +1,22 @@
+<script>
+  // Altere o exercício anterior para gerar um número aleatório N entre 0 e 100.
+  // Através de prompt box você deverá tentar adivinhar o número gerado, até
+  // acertá-lo. A cada tentativa incorreta, você deverá informar se o número é
+  // maior ou menor que o chute.
+
+  let num = Math.floor(100 * Math.random());
+  let acertou = false;
+
+  do {
+    let tentativa = prompt("Adivinhe o número:");
+
+    if (tentativa == num) {
+      alert("Parabens, voce acertou! O numero correto eh " + num);
+      acertou = true;
+    } else if (tentativa > num) {
+      alert("O numero eh menor que " + tentativa);
+    } else {
+      alert("O numero eh maior que " + tentativa);
+    }
+  } while (!acertou);
+</script>

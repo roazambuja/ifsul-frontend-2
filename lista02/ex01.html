@@ -1,0 +1,22 @@
+<script>
+  // Solicite 2 notas de um aluno com o prompt. A seguir,
+  // calcule a média do aluno, sabendo que a nota 1 tem peso 3.5 e a nota 2 tem
+  // peso 6.5. Considerando que a média para aprovação é 7.0, mostre com um
+  // alert as 2 notas, a média e se o aluno está aprovado ou reprovado.
+
+  let nota1 = prompt("Digite a nota 1:");
+  let nota2 = prompt("Digite a nota 2:");
+
+  let media = nota1 * 0.35 + nota2 * 0.65;
+
+  alert(
+    "Nota 1: " +
+      nota1 +
+      ", nota 2: " +
+      nota2 +
+      ", nota final: " +
+      media +
+      ". Aluno " +
+      (media > 7 ? "aprovado" : "reprovado")
+  );
+</script>

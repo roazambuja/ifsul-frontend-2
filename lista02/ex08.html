@@ -1,0 +1,30 @@
+<script>
+  // Faça um programa que solicita a altura (m) e o peso (kg) do paciente. Calcule
+  // o IMC: peso / (altura * altura) e mostre a classificação e o risco para a saúde
+  // de acordo com o valor calculado, com base na tabela:
+
+  let altura = prompt("Digite sua altura (em metros):");
+  let peso = prompt("Digite seu peso:");
+
+  let imc = peso / (altura * altura);
+
+  if (imc < 18.5) {
+    alert("Classificacao: abaixo do peso\nRisco para a saude: elevado.");
+  } else if (imc < 25) {
+    alert("Classificacao: peso ideal\nRisco para a saude: inexistente.");
+  } else if (imc < 30) {
+    alert("Classificacao: excesso de peso\nRisco para a saude: elevado.");
+  } else if (imc < 35) {
+    alert(
+      "Classificacao: obesidade grau I\nRisco para a saude: muito elevado."
+    );
+  } else if (imc < 40) {
+    alert(
+      "Classificacao: obesidade grau II\nRisco para a saude: muitissimo elevado."
+    );
+  } else if (imc > 40) {
+    alert(
+      "Classificacao: obesidade grau III\nRisco para a saude: obesidade morbida."
+    );
+  }
+</script>
