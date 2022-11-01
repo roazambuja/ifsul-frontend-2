@@ -1,0 +1,25 @@
+<html>
+  <head>
+    <script>
+      //     Altere o exemplo 2 visto em aula (lâmpada acesa/apagada) para que ao invés
+      // de clicar, basta que o usuário passe o mouse sobre a lâmpada para que ela
+      // acenda/apague (evento “mouseover”).
+
+      function troca() {
+        var image = document.getElementById("imagem");
+        if (image.src.indexOf("aceso") >= 0) {
+          image.src = "apagado.jpg";
+        } else {
+          image.src = "aceso.jpg";
+        }
+      }
+
+      window.addEventListener("load", function () {
+        document.getElementById("imagem").addEventListener("mouseover", troca);
+      });
+    </script>
+  </head>
+  <body>
+    <img src="apagado.jpg" id="imagem" />
+  </body>
+</html>

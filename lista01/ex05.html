@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <script>
+      // Imagine que um novo veículo foi lançado e você foi convidado para implementar
+      // um programa para exibir algumas informações sobre a autonomia no painel do
+      // veículo. Considere que o veículo consegue rodar 17km com apenas 1 litro de
+      // combustível e que cada litro de combustível custa R$ 6,39.
+      // O usuário deverá informar quanto dinheiro possui e, com base no valor
+      // informado, o programa deverá calcular quantos litros de combustível podem ser
+      // comprados e quantos quilômetros o carro consegue andar com este tanto de
+      // combustível.
+      // Utilize um campo de texto para que o usuário informe a quantia que ele possui e
+      // um botão “Calcular” que, ao ser pressionado, calcula e mostra as informações
+      // em um parágrafo de texto, conforme a mensagem a seguir:
+      // Com R$ X reais, você compra Y litros de combustível e consegue rodar Z
+      // km antes de abastecer novamente!
+
+      function calcula() {
+        let dinheiro = document.getElementById("dinheiro").value;
+        let litros = (parseFloat(dinheiro) / 6.39).toFixed(2);
+        let km = (litros * 17).toFixed(2);
+        alert(
+          "Com R$ " +
+            dinheiro +
+            " reais, você compra " +
+            litros +
+            " litros de combustível e consegue rodar " +
+            km +
+            "km antes de abastecer novamente!"
+        );
+      }
+
+      addEventListener("load", function () {
+        document.getElementById("calcula").addEventListener("click", calcula);
+      });
+    </script>
+  </head>
+  <body>
+    <form>
+      <label>Quantidade de dinheiro que voce possui:</label
+      ><input type="text" id="dinheiro" />
+      <button id="calcula">Calcula</button>
+    </form>
+  </body>
+</html>
