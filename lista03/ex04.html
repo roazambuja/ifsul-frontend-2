@@ -1,0 +1,18 @@
+<script>
+  // Crie uma função que receba 2 parâmetros (H e M), os quais correspondem
+  // às horas (H) e minutos (M) de uma hora na notação de 24 horas (15:45). A
+  // função deverá converter da notação de 24 horas para a notação de 12 horas.
+  // Por exemplo, a função deve converter 15:45 em "3:45 P.M.".
+
+  function converteHoras(H, M) {
+    let turno = "A.M.";
+    if (H > 12) {
+      H = H - 12;
+      turno = "P.M.";
+    }
+    return H + ":" + M + " " + turno;
+  }
+
+  document.write("15:45 - " + converteHoras(15, 45) + "<br>");
+  document.write("3:45 - " + converteHoras(3, 45));
+</script>

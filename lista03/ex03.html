@@ -1,0 +1,25 @@
+<script>
+  // Um número é dito perfeito quando ele é igual a soma de seus fatores. Por
+  // exemplo, os fatores de 6 são 1, 2 e 3 (ou seja, podemos dividir 6 por 1, por
+  // 2 e por 3 sem que sobre algo no resto - divisão inteira) e 6=1+2+3, logo 6 é
+  // um número perfeito. Escreva uma função que recebe um inteiro e diz se ele
+  // é perfeito ou não. Faça um script que peça um inteiro n e mostre todos os
+  // números perfeitos até n, chamando a função criada
+
+  function ehPerfeito(num) {
+    let soma = 0;
+    for (let i = 1; i < num; i++) {
+      if (num % i == 0) {
+        soma = soma + i;
+      }
+    }
+    return soma == num ? true : false;
+  }
+
+  let n = prompt("Digite um numero: ");
+  for (let i = 1; i <= n; i++) {
+    if (ehPerfeito(i)) {
+      document.write(i + " é perfeito<br>");
+    }
+  }
+</script>

@@ -1,0 +1,37 @@
+<script>
+  // Elabore um script que leia dois números e imprima em uma tabela (gerada
+  // dinamicamente) o resultado das operações aritméticas soma, produto,
+  // divisão e resto da divisão (%) entre esses números.
+  // Exemplo de tabela que deve ser gerada para as entradas 2 e 1.
+  // Operação | Valor
+  // 2 + 1    | 3
+  // 2 * 1    | 2
+  // 2 / 1    | 2
+  // 2 % 1    | 0
+
+  function operacoes(n1, n2) {
+    document.write("<table>");
+    document.write("<tr> <td>Operacao</td> <td>Valor</td> </tr>");
+    document.write(
+      "<tr> <td> " +
+        n1 +
+        " + " +
+        n2 +
+        "</td> <td> " +
+        (parseInt(n1) + parseInt(n2)) +
+        "</td> </tr>"
+    );
+    document.write(
+      "<tr> <td> " + n1 + " * " + n2 + "</td> <td> " + n1 * n2 + "</td> </tr>"
+    );
+    document.write(
+      "<tr> <td> " + n1 + " / " + n2 + "</td> <td> " + n1 / n2 + "</td> </tr>"
+    );
+    document.write(
+      "<tr> <td> " + n1 + " % " + n2 + "</td> <td> " + (n1 % n2) + "</td> </tr>"
+    );
+    document.write("</table>");
+  }
+
+  operacoes(2, 1);
+</script>

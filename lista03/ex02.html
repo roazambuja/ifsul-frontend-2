@@ -1,0 +1,28 @@
+<script>
+  // Crie uma função que receba as notas de um aluno e calcule a sua nota final
+  // na disciplina. A função pode receber 3 ou 4 argumentos. No primeiro caso,
+  // são as notas de cada uma das avaliações do semestre (A1 e A2, com peso
+  // 3.5 e A3 com peso 3). O quarto argumento (R1), se fornecido, indica a nota
+  // da reavaliação final do aluno. Assim, a sua função deve fazer a conta para 3
+  // argumentos (o aluno não ficou em reavaliação) e para 4 argumentos (o aluno
+  // que ficou em reavaliação). No caso de reavaliação, a nota final será a maior
+  // nota entre a média das três avaliações e a nota da reavaliação.
+
+  function calculaNota() {
+    let nota =
+      parseFloat(arguments[0]) * 0.35 +
+      parseFloat(arguments[1]) * 0.35 +
+      parseFloat(arguments[2]) * 0.3;
+    if (arguments.length == 4) {
+      if (arguments[3] > nota) {
+        nota = arguments[3];
+      }
+    }
+    return nota;
+  }
+
+  alert(calculaNota(10, 10, 10));
+  alert(calculaNota(10, 0, 0));
+  alert(calculaNota(10, 0, 0, 6));
+  alert(calculaNota(10, 0, 0, 2.4));
+</script>

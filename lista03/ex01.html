@@ -1,0 +1,24 @@
+<script>
+  // Crie uma função que recebe um inteiro positivo e teste para saber se ele é
+  // primo ou não (um número primo é divisível apenas por 1 e por ele mesmo).
+  // Faça um script que recebe um inteiro n e mostra todos os primos, de 1 até
+  // n, chamando a função criada.
+
+  function ehPrimo(num) {
+    let cont = 0;
+    for (let i = 1; i <= num; i++) {
+      if (num % i == 0) {
+        cont++;
+      }
+    }
+
+    return cont == 2 || cont == 1 ? true : false;
+  }
+
+  let n = prompt("Digite um numero: ");
+  for (let i = 1; i <= n; i++) {
+    document.write(
+      "<p> O numero " + i + (ehPrimo(i) ? " é " : " não é ") + "primo. </p>"
+    );
+  }
+</script>

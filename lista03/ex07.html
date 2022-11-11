@@ -1,0 +1,23 @@
+<script>
+  // Crie uma função "compara" que recebe como parâmetros 2 números
+  // aleatórios entre 1 e 10 e verifica qual deles é o maior, mostrando uma
+  // mensagem adequada.
+
+  function compara(n1, n2) {
+    if (n1 < n2) {
+      alert(
+        "O primeiro numero [" + n1 + "] eh menor que o segundo [" + n2 + "]"
+      );
+    } else if (n1 > n2) {
+      alert(
+        "O primeiro numero [" + n1 + "] eh maior que o segundo [" + n2 + "]"
+      );
+    } else {
+      alert("Os dois numeros sao iguais [" + n1 + "]");
+    }
+  }
+
+  compara(1, 4);
+  compara(9, 2);
+  compara(8, 8);
+</script>
