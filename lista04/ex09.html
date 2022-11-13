@@ -1,0 +1,13 @@
+<script>
+  // Elabore um programa que solicite uma frase ao usuário. Após o programa
+  // deverá solicitar duas palavras onde: a primeira palavra indica o texto a ser
+  // substituído; a segunda palavra indica o texto que irá substituir todas as
+  // ocorrências da primeira palavra. Após o programa deverá apresentar em um
+  // alert, a frase com a substituição dos textos.
+
+  let frase = prompt("Digite uma frase");
+  let palavra1 = prompt("Digite a palavra que será substituida");
+  let palavra2 = prompt("Digite a palavra que irá substituir a anterior");
+
+  alert(frase.replaceAll(palavra1, palavra2));
+</script>

@@ -1,0 +1,11 @@
+<script>
+  // Crie um programa que solicita ao usuário uma palavra. A partir daí o
+  // programa deve formatar a palavra de forma que a primeira letra seja uma
+  // maiúscula e as letras restantes sejam minúsculas.
+
+  let palavra = prompt("Digite uma palavra");
+  palavra =
+    palavra.charAt(0).toUpperCase() +
+    palavra.substring(1, palavra.length).toLowerCase();
+  alert(palavra);
+</script>

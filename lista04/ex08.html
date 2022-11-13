@@ -1,0 +1,19 @@
+<script>
+  // Elabore um programa que solicite uma frase e após uma palavra. O
+  // programa deverá mostrar em um alert quantas ocorrências da palavra
+  // existem na frase.
+  // DICA: o método indexOf, possibilita a utilização de dois parâmetros.
+  // Pesquise sobre o uso do segundo parâmetro.
+
+  let frase = prompt("Digite uma frase");
+  let palavra = prompt("Digite uma palavra");
+  let cont = 0;
+
+  let indice = frase.indexOf(palavra);
+  while (indice != -1) {
+    cont++;
+    indice = frase.indexOf(palavra, indice + 1);
+  }
+
+  alert("A palavra aparece " + cont + " vezes");
+</script>

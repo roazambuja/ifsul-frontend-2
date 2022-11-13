@@ -1,0 +1,17 @@
+<script>
+  // Crie um algoritmo que monta uma tabela com o resultado do seno, cosseno
+  // e tangente dos ângulos compreendidos entre 0° e 360°, espaçados em 45°.
+
+  document.write("<table>");
+  document.write(
+    "<tr><td>Angulo</td><td>Seno</td><td>Cosseno</td><td>Tangente</td></tr>"
+  );
+
+  for (let i = 0; i <= 360; i += 45) {
+    document.write("<tr><td>" + i + "</td>");
+    document.write("<td>" + Math.sin(i).toFixed(2) + " </td>");
+    document.write("<td>" + Math.cos(i).toFixed(2) + "</td>");
+    document.write("<td>" + Math.tan(i).toFixed(2) + "</td></tr>");
+  }
+  document.write("</table>");
+</script>

@@ -1,0 +1,19 @@
+<script>
+  // Crie o programa aposte_no_dado, onde a pessoa digita um número entre 1
+  // e 6 e o sistema, com o auxílio da função random, “sorteia” um número dentro
+  // do conjunto [1,6] verificando se a pessoa apostou no número correto. Caso
+  // o número apostado seja escolhido, o sistema apresenta uma frase dizendo
+  // que a pessoa venceu. Caso contrário, diz qual o número sorteado,
+  // informando que a pessoa perdeu a aposta
+
+  let num = Math.floor(6 * Math.random() + 1);
+  let tentativa = prompt("Aposte no dado:");
+
+  if (tentativa == num) {
+    alert("Parabens, voce acertou!");
+    cont = 3;
+  } else {
+    alert("Voce perdeu a aposta! O numero sorteado era " + num);
+    cont++;
+  }
+</script>

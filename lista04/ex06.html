@@ -1,0 +1,24 @@
+<script>
+  // Elabore um programa que solicita um número indeterminado de palavras por
+  // prompt. Cada palavra informada deverá ser invertida e armazenada em um
+  // vetor. Após, o programa deverá percorrer o vetor imprimindo as palavras
+  // invertidas em uma tabela HTML.
+
+  let vet = [];
+
+  for (let i = 0; i < 5; i++) {
+    let palavra = prompt("Digite uma palavra");
+
+    vet[i] = "";
+
+    for (let j = palavra.length - 1; j >= 0; j--) {
+      vet[i] = vet[i] + palavra.charAt(j);
+    }
+  }
+
+  document.write("<table>");
+  for (let i = 0; i < 5; i++) {
+    document.write("<tr><td> " + vet[i] + "</td></tr>");
+  }
+  document.write("</table>");
+</script>
