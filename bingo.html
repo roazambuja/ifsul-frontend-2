@@ -1,0 +1,61 @@
+<script>
+  // João deseja contratar você para desenvolver um aplicativo, a ser usado em um bingo
+  // comunitário que irá angariar fundos para a escola de seu bairro. A ideia, a ser desenvolvida
+  // em Javascript puro, é que seja criada uma função que apresenta números sorteados
+  // aleatoriamente entre 1 e 99, sem repetição, a cada chamada da função, até que alguém
+  // anuncie (também por meio da chamada de uma função) o bingo. Para isso faça as
+  // seguintes tarefas:
+  //    1. Crie a função sorteia(), a qual gera números aleatórios, entre 1 e 99.
+  //    2. Sabendo que se trata de um jogo de bingo, os números sorteados não devem se
+  // repetir, portanto garanta que um número não possa ser apresentado mais de uma
+  // vez.
+  //    3. Faça com que cada novo número sorteado seja apresentado na tela a partir da
+  // chamada de um alert.
+  //    4. Crie a função bingo, que finaliza o sorteio de novos números [0,3], apresentando
+  // quantos números foram sorteados e quais foram esses números, por meio do
+  // método document.write. Essa função deverá ser executada automaticamente após
+  // o sorteio de 40 números.
+
+  function sorteia(numeros) {
+    let jaSorteado, num;
+    do {
+      jaSorteado = false;
+      num = Math.floor(99 * Math.random() + 1);
+      if (numeros.includes(num)) {
+        jaSorteado = true;
+      } else {
+        numeros.push(num);
+      }
+    } while (jaSorteado);
+    return numeros;
+  }
+
+  function bingo(quantidade, numeros) {
+    document.write(
+      "<p>Quantidade de números sorteados: " + quantidade + "</p>"
+    );
+    document.write(
+      "<p>Numeros sorteados: " +
+        numeros.sort(function (a, b) {
+          return a - b;
+        }) +
+        "</p>"
+    );
+    return true;
+  }
+
+  let finaliza = false;
+  let sorteados = [];
+  let rodadas = 0;
+
+  do {
+    sorteados = sorteia(sorteados);
+    alert("Numero sorteado: " + sorteados[sorteados.length - 1]);
+
+    rodadas++;
+
+    if (rodadas == 40) {
+      finaliza = bingo(rodadas, sorteados);
+    }
+  } while (!finaliza);
+</script>
