@@ -1,0 +1,36 @@
+<html>
+  <head>
+    <script>
+      function tentativa(tent) {
+        let texto;
+        cont++;
+        let item = document.createElement("li");
+
+        if (tent > valor) {
+          texto = `O número ${tent} é maior do que o valor secreto `;
+        } else if (tent < valor) {
+          texto = `O número ${tent} é menor do que o valor secreto `;
+        } else {
+          texto = `Você acertou o número ${valor} em ${cont} tentativas`;
+          if (cont <= 10) {
+            item.style.color = "#5b9d5b";
+          } else if (cont <= 15) {
+            item.style.color = "#eeb310";
+          } else {
+            item.style.color = "#ce0b0b";
+          }
+        }
+
+        item.append(document.createTextNode(texto));
+        let lista = document.querySelector("ul");
+        lista.append(item);
+      }
+
+      let valor = Math.floor(100 * Math.random() + 1);
+      let cont = 0;
+    </script>
+  </head>
+  <body>
+    <ul></ul>
+  </body>
+</html>
