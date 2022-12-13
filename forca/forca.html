@@ -1,0 +1,78 @@
+<html>
+  <head>
+    <style type="text/css">
+      div {
+        width: 50px;
+        height: 20px;
+        border: solid black 1px;
+        margin: 10px;
+        float: left;
+      }
+    </style>
+    <script>
+      let palavras = [
+        "banana",
+        "cabelo",
+        "pista",
+        "computador",
+        "mundial",
+        "futebol",
+        "chinelo",
+        "cheiro",
+        "escola",
+        "forca",
+      ];
+
+      let erros = 0,
+        acertos = 0;
+      let palavra, img;
+
+      function selecionaPalavra() {
+        let num = Math.floor(10 * Math.random());
+
+        img = document.createElement("img");
+        img.setAttribute("src", "forca0.png");
+        img.style.display = "block";
+        document.body.append(img);
+
+        criaDivs(palavras[num].length);
+        palavra = palavras[num];
+      }
+
+      function criaDivs(tamanho) {
+        for (let i = 0; i < tamanho; i++) {
+          let div = document.createElement("div");
+          document.body.append(div);
+        }
+      }
+
+      function testaOcorrencia(letra) {
+        letra = letra.toLowerCase();
+        let divs = document.querySelectorAll("div");
+
+        let existe = false;
+        for (let i = 0; i < palavra.length; i++) {
+          if (palavra.charAt(i) == letra) {
+            existe = true;
+            acertos++;
+            divs[i].append(document.createTextNode(letra));
+          }
+        }
+
+        if (!existe) {
+          erros++;
+          img.setAttribute("src", "forca" + erros + ".png");
+        }
+
+        if (acertos == palavra.length) {
+          alert("Voce ganhou!");
+        }
+
+        if (erros == 6) {
+          alert("Voce perdeu!");
+        }
+      }
+    </script>
+  </head>
+  <body></body>
+</html>
